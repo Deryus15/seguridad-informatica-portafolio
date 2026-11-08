@@ -2,8 +2,9 @@
 
 Formato de fechas: dd/MM/yyyy
 
-## 07/11/2026 — v1.3 · Publicación en línea (GitHub Pages)
+## 07/11/2026 — v1.3 · Versión pública
 - Repositorio público con historial limpio (el repositorio privado anterior queda como respaldo).
+- GitHub Pages descartado (el dominio `clodnote.me` del sitio de usuario redirige los proyectos); se publica con Netlify Drop.
 - Cédula del autor tapada en los PDF públicos (Parcial 1 a mano, Laboratorios 1 y 2) con `tools/build_assets.py`.
 - Commits con correo `noreply` de GitHub.
 

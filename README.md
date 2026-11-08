@@ -11,7 +11,7 @@ Portafolio web interactivo que reúne todas las asignaciones del semestre, en el
 
 > Proyecto universitario. No pertenece a Vorluno.
 
-🌐 **Versión en línea:** https://deryus15.github.io/seguridad-informatica-portafolio/
+🌐 **Versión en línea:** _(pendiente: se agrega aquí el enlace al publicarla en Netlify)_
 
 ## ▶ Cómo abrirlo
 
@@ -71,6 +71,9 @@ cd seguridad-informatica-portafolio
 
 ### Agregar otro aporte
 En `js/aportes.js` escribe una función `mi_aporte(el)` que dibuje dentro de `el` y añade un objeto a `window.APORTES` (`id`, `n`, `tag`, `titulo`, `desc`, `src`, `mount`).
+
+### Publicar / compartir
+GitHub Pages no sirve para este repositorio: el sitio de usuario `Deryus15.github.io` tiene el dominio `clodnote.me` y todos los proyectos se redirigen allí. Se publica con **Netlify Drop** (arrastrar la carpeta, o el `.zip`, a https://app.netlify.com/drop). Al subir una nueva versión, vuelve a arrastrar la carpeta.
 
 ### Probar en local con servidor (opcional)
 ```bash
