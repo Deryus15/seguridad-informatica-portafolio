@@ -1,0 +1,6 @@
+tools/_preview_lum.png
+__pycache__/
+*.pyc
+Thumbs.db
+.DS_Store
+tools/datos_privados.txt

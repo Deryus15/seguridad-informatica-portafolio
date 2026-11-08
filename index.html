@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portafolio Tecnológico · Dereck Martínez · Seguridad Informática</title>
+  <meta name="description" content="Portafolio Tecnológico de Seguridad Informática — Lic. en Gestión de Tecnología de la Información, UNACHI.">
+  <meta name="theme-color" content="#07070b">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307070b'/%3E%3Cpath d='M20 22l-10 10 10 10M44 22l10 10-10 10M36 16l-8 32' stroke='%23ff2e4d' stroke-width='5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/aportes.css">
+</head>
+<body>
+  <!-- Fondo: lluvia de código reactiva al mouse y al scroll -->
+  <canvas id="rain" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+
+  <!-- Navegación: pestañas como en la figura del instructivo -->
+  <header class="nav" id="nav">
+    <a class="brand" href="#portada" aria-label="Ir a la portada"><span class="brand__mark">&lt;/&gt;</span><span class="brand__txt">DM<em>.sec</em></span></a>
+    <nav class="tabs" id="tabs" aria-label="Secciones del portafolio"></nav>
+    <div class="nav__progress"><i id="progress"></i></div>
+  </header>
+
+  <main id="main">
+    <!-- PORTADA -->
+    <section class="hero" id="portada" data-color="#ff2e4d">
+      <div class="hero__stage">
+        <div class="hero__copy">
+          <p class="term" id="term" aria-hidden="true"></p>
+          <p class="eyebrow">Portafolio Tecnológico · Proyecto No. 3</p>
+          <h1 class="hero__title" aria-label="Dereck Martínez">
+            <span class="scramble" data-text="Dereck">Dereck</span>
+            <span class="scramble outline" data-text="Martínez">Martínez</span>
+          </h1>
+          <p class="hero__sub">Seguridad Informática</p>
+          <ul class="chips" id="chips"></ul>
+          <a class="cta" href="#contenido"><span>Entrar al portafolio</span><i>↓</i></a>
+        </div>
+        <div class="hero__face" id="faceWrap">
+          <canvas id="face" aria-label="Retrato de Dereck Martínez dibujado con caracteres de código"></canvas>
+          <div class="hero__hint"><i></i> mueve el cursor · clic para onda</div>
+        </div>
+      </div>
+      <div class="hero__foot">
+        <div class="stat"><b data-count id="statDocs">0</b><span>archivos incrustados</span></div>
+        <div class="stat"><b data-count id="statSecs">0</b><span>secciones</span></div>
+        <div class="stat"><b>100</b><span>puntos · rúbrica</span></div>
+        <div class="scrollcue"><span>scroll</span><i></i></div>
+      </div>
+    </section>
+
+    <!-- El resto de secciones se genera desde js/data.js -->
+  </main>
+
+  <footer class="footer" id="footer">
+    <p class="footer__lema" id="lema"></p>
+    <p class="footer__meta" id="footerMeta"></p>
+  </footer>
+
+  <!-- Visor de documentos -->
+  <div class="viewer" id="viewer" hidden>
+    <div class="viewer__bar">
+      <div class="viewer__title"><span id="vTag" class="tag"></span><strong id="vTitle"></strong></div>
+      <div class="viewer__actions">
+        <span class="viewer__count" id="vCount"></span>
+        <button id="vZoomOut" aria-label="Reducir">−</button>
+        <button id="vZoomIn" aria-label="Ampliar">+</button>
+        <button id="vPrev" aria-label="Documento anterior" title="Documento anterior (←)">←</button>
+        <button id="vNext" aria-label="Documento siguiente" title="Documento siguiente (→)">→</button>
+        <a id="vOpen" target="_blank" rel="noopener">PDF original</a>
+        <a id="vDown" class="primary" download>Descargar</a>
+        <button id="vClose" aria-label="Cerrar visor">✕</button>
+      </div>
+    </div>
+    <div class="viewer__body" id="vBody"></div>
+  </div>
+
+  <script src="js/face-data.js"></script>
+  <script src="js/pages.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/aportes.js"></script>
+  <script src="js/bg.js"></script>
+  <script src="js/hero.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
